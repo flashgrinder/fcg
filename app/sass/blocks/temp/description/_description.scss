@@ -1,0 +1,77 @@
+.description {
+    padding: 30px 0 30px 0;
+    &__article {
+        @include lg-block {
+            flex-direction: column;
+        }
+        position: relative;
+        display: flex;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        &::before {
+            content: url('../img/icon/svg/icon-doc.svg');
+            position: absolute;
+            right: 0;
+            top: -10px;
+            width: 46px;
+            height: 20px;
+        }
+    }
+    &__aside {
+        @include lg(max-width, 100%);
+        max-width: 470px;
+        flex: 0 1 auto;
+    }
+    &__figure {
+        margin: 0;
+    }
+    &__img {
+        @include lg(height, 300px);
+        display: block;
+        height: max-content;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__content {
+        @include size(7);
+        @include size-lg(12);
+        @include lg-block {
+            align-self: center;
+            padding: 20px 5px;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px 30px 30px;
+    }
+    &__header {
+        margin-bottom: 30px;
+    }
+    &__title {
+        text-align: left;
+    }
+    &__text {
+        p {
+            margin: 20px 0;
+            &:first-child {
+                margin: 0 0 20px 0;
+            }
+        }
+        ul
+            li ~ li {
+                margin-top: 15px;
+            }
+    }
+    &__footer {
+        width: 100%;
+        margin-top: auto;
+    }
+    &__actions {
+        @include lg-block {
+            justify-content: center;
+            margin-right: 0;
+        }
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,60 @@
+.header {
+    @include md(padding, 10px 0);
+    padding: 20px 0;
+    transition: linear .1;
+    &__body {
+        @include sm(flex-direction, column);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__burger-menu {
+        @include lg(order, 1);
+        @include sm-block {
+            position: absolute;
+            right: 10px;
+        }
+    }
+    &__menu {
+        @include lg-block {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            text-align: center;
+            background: var(--color-primary);
+            width: 100%;
+            transition: linear .2s;
+            z-index: 101;
+            transform: scale(1) scaleZ(1) rotateX(-90deg) rotateY(0deg);
+            transform-origin: 0% 0%;
+            .menu__list {
+                flex-direction: column;
+            }
+            .menu__item {
+                margin-right: 0;
+                padding: 20px 0;
+            }
+        }
+        &.header__menu_active {
+            @include lg-block {
+                opacity: 1;
+                transform: scale(1) scaleZ(1) rotateX(0deg) rotateY(0deg);
+                transform-origin: 50% 0%;
+            }
+        }
+    }
+    &__logo {
+        @include sm(align-self, flex-start);
+        & .logo__img {
+            height: 20px;
+        }
+    }
+    &__contact-phone {
+        @include sm(margin-top, 20px)
+    }
+    &_position_sticky {
+        position: sticky;
+        top: 0;
+        z-index: 500;
+    }
+}

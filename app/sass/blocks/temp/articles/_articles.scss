@@ -1,0 +1,27 @@
+.articles {
+    padding: 30px 0 30px 0;
+    &__title {
+        text-align: left;
+    }
+    &__grid {
+        @include row-flex();
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__column {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+        @include size-xs(12);
+        margin-top: 60px;
+        @include sm-block {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__actions {
+        margin: 30px 0 0 0;
+        text-align: center;
+    }
+}

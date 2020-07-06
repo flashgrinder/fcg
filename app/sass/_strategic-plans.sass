@@ -1,0 +1,77 @@
+@import "variables.sass"
+
+.plans
+	background: #E8EAEA
+	padding-top: 30px
+	padding-bottom: 40px
+	&-title
+		font-size: 22px
+		font-weight: 400
+		text-align: center
+		padding-bottom: 30px
+
+.plans-block
+	+row-flex()
+	align-items: flex-start
+	justify-content: center
+	&__container
+		+col()
+		+size(3)
+		+size-md(6)
+		+size-xs(12)
+		position: relative
+		margin: 0
+		padding: 0 
+		&-img
+			position: relative
+			overflow: hidden
+			max-height: 500px
+			max-width: 500px 
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: $bg-overlay_2
+				transition: background .5s
+			&:hover
+				&:before
+					background: transparent
+					transition: background .5s
+			img
+				display: block
+				height: 100%
+				width: 100%
+				object-fit: cover
+		&-img.colors
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: $bg-overlay_1
+				transition: background .5s
+			&:hover
+				&:before
+					background: transparent
+					transition: background .5s
+		&-text
+			position: absolute
+			top: 35%
+			left: 50%
+			max-width: 200px
+			margin-left: -100px
+			font-size: 30px
+			font-weight: 700
+			text-align: center
+			color: $text-light
+			+lg-block
+				font-size: 24px
+			+md-block
+				top: 40%
+			+xs-block
+				font-size: 30px

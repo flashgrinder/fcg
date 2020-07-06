@@ -1,0 +1,1317 @@
+/* Landing First-block */
+/* Landing-1 */
+.landingAdvantage
+	background-color: #4A72CE
+	padding-top: 50px
+	&__container
+		+row-flex()
+		justify-content: center
+		align-items: flex-start
+	&__text
+		+col()
+		+size(5)
+		+size-xl(12)
+		padding: 0 60px 50px 60px
+		+xl(padding, 0 0 50px 0)
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		color: #ffffff
+		margin: 0 0 30px 0
+		text-transform: uppercase
+		+xl(font-size, 30px)
+		+md(font-size, 24px)
+	&__descr
+		font-family: 'Roboto', sans
+		font-weight: 400
+		font-size: 18px
+		line-height: 20px
+		color: #ffffff
+	&__img
+		+col()
+		+size(6)
+		+size-xl(12)
+		align-self: flex-end
+		margin-bottom: 0
+		img
+			display: block
+			width: 100%
+			height: 100%
+/* Landing Second-block */
+.landingCharges
+	position: relative
+	padding-bottom: 50px
+	&__container
+		+row-flex()
+		justify-content: center
+	&__text
+		+col()
+		+size(5)
+		+size-xl(8)
+		+size-xls(12)
+		padding: 50px 0 0 60px
+		+xl(padding, 50px 0 0 60px)
+		+xls(padding, 50px 0 0 0)
+	&__heading
+		font-family: 'Gotham', sans
+		font-size: 38px
+		font-weight: 900
+		line-height: 40px
+		margin: 0
+		color: #999999
+		+xl(font-size, 30px)
+		+xl(text-align, center)
+		+md(font-size, 24px)
+	&__img
+		margin-top: 20px
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: contain
+	&__tube
+		+col()
+		+size(6)
+		+size-xl(12)
+		+size-lg(8)
+		+xl(order, -1)
+		img
+			display: block
+			margin: 0 auto
+			width: 400px
+			height: auto
+/* Landing Three-block */
+.landingPrice
+	padding-top: 50px
+	padding-bottom: 50px
+	background: #4A72CE
+	&__container
+		+row-flex()
+		justify-content: center
+		align-items: flex-start
+	&__heading
+		+col()
+		+size(6)
+		+size-xl(12)
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		text-transform: uppercase
+		color: #ffffff
+		margin: 0 0 10px 0
+		+xl(font-size, 30px)
+		+xl(text-align, center)
+		+md(font-size, 24px)
+	&__descr
+		+col()
+		+size(4)
+		+size-xl(12)
+		+xl(order, -1)
+		+xl(padding-bottom, 30px)
+	&__subtitle
+		font-family: 'Roboto', sans
+		font-weight: 400
+		font-size: 18px
+		line-height: 20px
+		color: #ffffff
+		margin: 0
+/** Landing Promo **/
+.landingPromo
+	margin: 30px 0 0 0
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		background: #5FB2D6
+		+md-block
+			flex-direction: column
+	&__heading
+		width: 50%
+		padding: 15px
+		+md-block
+			padding: 30px 15px
+			width: 100%
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		text-transform: uppercase
+		color: #ffffff
+		margin: 0 0 10px 0
+		+xl(font-size, 30px)
+		+md-block
+			text-align: center
+			font-size: 24px
+	&__descr
+		font-family: 'Roboto', sans
+		font-size: 26px
+		line-height: 30px
+		text-align: left
+		font-weight: normal
+		text-transform: uppercase
+		color: #ffffff
+		margin-top: 40px
+		+xl(font-size, 24px)
+		+md-block
+			text-align: center
+			font-size: 20px
+	&__subdescr
+		font-family: 'Roboto', sans
+		font-size: 12px
+		line-height: 16px
+		text-align: left
+		font-weight: normal
+		color: #ffffff
+		margin-top: 15px
+		+md(text-align, center)
+	&__img
+		width: 50%
+		text-align: right
+		overflow: hidden
+		background: url('../img/landing/promo.png') center center no-repeat
+		background-size: cover
+		min-height: 320px
+		+md-block
+			width: 100%
+			
+/* Landing Slider-block */
+.landingSlider
+	margin-top: 60px
+	+lg(display, none)
+	+xls(margin-top, 50px)
+	&__heading
+		font-family: 'Gotham', sans
+		font-size: 14px
+		line-height: 16px
+		text-align: center
+		font-weight: normal
+		text-transform: uppercase
+		color: #ffffff
+		margin-bottom: 30px
+	&__dots
+		display: flex
+		justify-content: space-around
+		align-items: center
+		margin-bottom: 20px
+		&-pipe
+			&:nth-child(1)
+				margin-left: 10px
+			&:nth-child(2)
+				margin-left: 20px
+		span
+			font-family: 'Roboto', sans
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			display: block
+			text-align: center
+			color: #ffffff
+	&__slide
+		display: block
+		margin: 0 auto
+		width: 81%
+/* Style noUiSlider line */
+#landingSlider__noUiSlider
+	position: relative
+	&::before, &::after
+		position: absolute
+		opacity: 0.99
+		content: ''
+		top: -1px
+		width: 100px
+		height: 2px
+		background: #FAFAFA
+		border-radius: 4px
+		border: 1px solid #D3D3D3
+    	box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB
+	&::before
+		left: -100px
+	&::after
+		right: -115px
+/* Landing Block-Cart */
+.landingCart
+	background: #ffffff
+	display: none
+	+lg(display, block)
+	+lg(padding-bottom, 50px)
+	&__container
+		+row-flex()
+		justify-content: center
+		align-items: flex-start
+		+lg-block
+			flex-direction: column
+			align-items: center
+	&__box
+		+size(2.4)
+		+size-lg(4)
+		+size-md(6)
+		+size-sm(10)
+		+size-xs(10)
+		position: relative
+		+lg-block
+			border: 1px solid #4A72CE
+			border-bottom: none
+    		border-top: none
+			&:last-of-type
+				border-bottom: 1px solid #4A72CE
+		&-outer
+			height: 190px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			border: 1px solid #4A72CE
+			border-top: none
+			border-right: none
+			+lg-block
+				min-height: 280px
+				border: 1px solid #4A72CE
+				margin: 8px
+				&:last-child
+					border-right: none
+			&-text
+				padding: 45px 12px
+				text-align: center
+			&-title
+				font-family: 'Roboto', sans
+				font-weight: 400
+				font-size: 14px
+				line-height: 16px
+				color: #4A72CE
+				margin: 0 0 15px 0
+			&-name
+				font-family: 'Gotham', sans
+				font-size: 24px
+				font-weight: 900
+				text-transform: uppercase
+				color: #4A72CE
+			&-descr
+				display: none
+				font-family: 'Roboto', sans
+				font-weight: 400
+				font-size: 14px
+				line-height: 16px
+				color: #4A72CE
+				margin: 15px 0 0 0
+				+lg(display, block)
+		&-inner
+			margin: 0 8px
+			padding: 0 0 10px 0
+			border-bottom: 1px solid #ffffff
+			&:last-of-type
+				border-bottom: none
+			&-wrapper
+				position: absolute
+				top: -190px
+				left: 0
+				right: 0
+				background: #4A72CE
+				+lg(top, 0)
+			&-title
+				font-family: 'Roboto', sans
+				font-weight: 400
+				font-size: 14px
+				line-height: 16px
+				color: #ffffff
+				padding: 8px 0
+			&-padding
+				padding-top: 20px
+			&-plan
+				font-family: 'Gotham', sans
+				font-weight: 900
+				font-size: 18px
+				line-height: 20px
+				text-transform: uppercase
+				color: #ffffff
+				padding: 8px 0
+				+xls(font-size, 16px)
+				span
+					font-family: 'Roboto', sans
+					font-size: 14px
+					line-height: 16px
+					font-weight: 400
+					text-transform: none
+					color: #ffffff
+			&-price
+				font-family: 'Gotham', sans
+				font-weight: 900
+				font-size: 18px
+				line-height: 20px
+				color: #ffffff
+				padding: 8px 0
+				+xls(font-size, 16px)
+			&-btn
+				display: flex
+				justify-content: center
+				margin-top: 15px
+				margin-bottom: 15px
+/** New Cart Product **/
+.product
+	+lg(display, none)
+	padding: 15px 0 15px 0
+	&-table
+		&__name
+			font-family: 'Gotham', sans
+			font-style: normal
+			font-weight: 900
+			font-size: 20px
+			line-height: 115%
+			color: #5FB2D6
+			text-align: left
+		&__head
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			height: 150px
+			background: #ffffff
+			border: 1px solid #4A72CE
+			border-bottom: none
+			font-style: normal
+			font-size: 16px;
+			line-height: 19px
+			color: #4A72CE
+			&-title
+				font-family: 'Roboto', sans
+				font-weight: normal
+			&-name
+				font-family: 'Gotham', sans
+				font-weight: 900
+				text-align: center
+				margin-top: 10px
+	&-row
+		display: flex
+		justify-content: space-between
+		min-height: 40px // 1
+		text-align: center // 1
+		&_style
+			&_bdb
+				border-bottom: 1px solid #C5C5C5
+			&_bg
+				background: #E5E5E5
+				cursor: pointer
+		&__group
+			display: none
+		&__name
+			display: flex
+			align-items: center
+			flex: auto
+			margin: 0 5px 0 0
+			padding-left: 10px
+			&-title
+				font-family: 'Roboto', sans
+				font-style: normal
+				font-weight: 400
+				font-size: 14px
+				&_arrow
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						bottom: 0.5em
+						right: -20px
+						top: 0
+						border: none
+						transform: rotate(45deg)
+						width: 8px
+						height: 8px
+						border-right: 2px solid #4A72CE
+						border-bottom: 2px solid #4A72CE
+		&__value
+			flex: 0 0 150px
+			margin: 0 5px
+			background: #4A72CE
+			display: flex
+			flex-direction: column
+			justify-content: center
+			color: #ffffff
+			&_white
+				background: #fff
+				color: #4A72CE
+			&:last-child
+				margin: 0 0 0 5px
+			&-volume
+				display: block
+				font-family: 'Gotham', sans
+				font-style: normal
+				font-weight: 900
+				font-size: 12px
+				padding: 5px 5px 5px 5px // 1
+			&-check
+				display: block
+				margin: 0 auto
+				width: 20px
+				height: 14px
+				transform: rotate(-45deg)
+				border-left: 3px solid #fff
+				border-bottom: 3px solid #fff
+				text-align: center
+			&-extra
+				font-family: 'Roboto', sans
+				font-style: normal
+				font-weight: 400
+				font-size: 12px
+				line-height: 14px
+				padding: 0px 5px 5px 5px
+			.btn-landing
+				max-width: 110px
+				font-size: 16px
+				padding: 5px 10px
+				margin: 10px auto
+	&-info
+		&__body
+			margin: 30px 0
+		&__text
+			font-family: 'Roboto', sans
+			font-style: normal
+			font-weight: 400
+			font-size: 12px
+			color: #555555
+			line-height: 150%
+
+/* Landing Block-PDF */
+.landingDeal
+	padding-bottom: 50px
+	&__heading
+		font-family: 'Roboto', sans
+		font-weight: 400
+		font-size: 18px
+		line-height: 20px
+		margin-bottom: 30px
+		+xs(padding, 0 15px)
+	&__btn-wrapp
+		display: flex
+		justify-content: center
+		margin-bottom: 30px
+	&__descr
+		font-family: 'Roboto', sans
+		font-weight: 400
+		font-size: 14px
+		line-height: 14px
+		color: #999999
+		+xs(padding, 0 15px)
+/* Landing Form */
+.modalBlock
+	display: none
+	&_active
+		display: block
+	&__overlay
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(0,0,0,0.3)
+		z-index: 9998
+		width: 100%
+		height: 100%
+	&__wrapp
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		z-index: 9999
+		padding: 20px 20px 40px 20px
+		background: #ffffff
+		max-width: 600px
+	&__title
+		font-family: 'Gotham', sans
+		font-family: 900
+		font-size: 20px
+		line-height: 22px
+		color: #ffffff
+		text-transform: uppercase
+	&__form
+		background: #4A72CE
+		padding: 15px
+		border: 1px solid #ffffff
+		form
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background: #4A72CE
+			margin: 15px
+			input
+				font-family: 'Roboto', sans
+				font-size: 16px
+				line-height: 19px
+				font-weight: 400
+				margin-bottom: 20px
+				padding: 10px 25px
+				border-radius: 30px
+				width: 100%
+				border: none
+			input[type="submit"]
+				background: #5FB2D6
+				border-radius: 30px
+				font-family: 'Gotham', sans
+				font-weight: 900
+				font-size: 18px
+				line-height: 20px
+				text-align: center
+				padding: 10px 25px
+				text-decoration: none
+				border: none
+				color: #ffffff
+				cursor: pointer
+				margin-bottom: -50px
+				&:hover
+					background: #43b1e0
+
+
+/* Button Landing */
+.btn-landing
+	display: block
+	background: #5FB2D6
+	border-radius: 30px
+	font-family: 'Gotham', sans
+	font-weight: 900
+	font-size: 18px
+	line-height: 20px
+	text-align: center
+	padding: 15px 25px
+	text-decoration: none
+	color: #ffffff
+	&:hover
+		background: #43b1e0
+
+/* Js filtrs */
+.js-filter
+	display: none
+.is-shows
+	display: block
+	position: relative
+
+/* Style noUiSlider */
+.noUi-value-horizontal
+	display: none
+.noUi-pips-horizontal
+	height: 40px
+	top: -16px
+.noUi-marker-horizontal.noUi-marker-large
+	height: 15px
+	width: 15px
+	opacity: 1
+	border-radius: 50%
+	background: #ffffff
+.noUi-marker-horizontal.noUi-marker-sub
+	height: 15px
+	width: 15px
+	border-radius: 50%
+	background: #ffffff
+.noUi-horizontal
+	height: 4px
+.noUi-connect
+	background: #ffffff
+.noUi-horizontal .noUi-handle
+	width: 26px !important
+	height: 26px !important
+	right: -17px
+	top: -12px
+	border-radius: 50%
+	outline: none
+	z-index: 5
+	cursor: pointer
+.noUi-touch-area
+	z-index: 5
+	cursor: pointer
+.noUi-handle:before, .noUi-handle:after
+	display: none
+
+/* Time Style */
+.busplan-screen
+	height: 600px
+.busplan-block
+	top: 30%
+/* Landing-2 */
+.landApproach
+	background: url('../img/landing/approach/bg.jpg') no-repeat center
+	background-size: cover
+	padding-top: 30px
+	padding-bottom: 150px
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		color: #4A72CE
+		text-align: center
+		margin: 0 0 50px 0
+	&__content
+		+row-flex()
+		justify-content: space-between
+		+md-block
+			justify-content: center
+			align-items: center
+	&__cart
+		+col()
+		+size(3.5)
+		+size-md(8)
+		+size-sm(12)
+		margin-bottom: 40px
+		&-img
+			height: 85px
+			width: 85px
+			margin: 0 auto
+			text-align: center
+			img
+				object-fit: contain
+		&-title
+			font-family: 'Gotham', sans
+			font-weight: 900
+			font-size: 18px
+			line-height: 20px
+			color: #4A72CE
+			text-align: center
+			margin: 40px 0 10px 0
+		&-text
+			font-family: 'Roboto', sans-serif
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			color: #555555
+			text-align: justify
+	&__btn
+		display: flex
+		justify-content: center
+.landChoose
+	background: #4A72CE
+	padding-top: 30px
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		color: white
+		text-align: center
+		margin: 0 0 50px 0
+	&__content
+		+row-flex()
+		justify-content: space-between
+		+md(justify-content, center)
+	&__cart
+		+col()
+		+size(3.5)
+		+size-md(8)
+		+size-sm(12)
+		margin-bottom: 50px
+		display: flex
+		flex-direction: column
+		align-items: center
+		&-img
+			height: 115px
+			width: 115px
+			margin: 0 auto
+			text-align: center
+			img
+				object-fit: contain
+		&-title
+			font-family: 'Gotham', sans
+			font-weight: 900
+			font-size: 18px
+			line-height: 20px
+			color: white
+			text-align: left
+			align-self: start
+			margin: 15px 0
+			position: relative
+			z-index: 10
+			&::before
+				content: ''
+				position: absolute
+				background: #5FB2D6
+				height: 100%
+				width: 100%
+				max-width: 300px
+				top: -10px
+				left: 10px
+				z-index: -1
+			&::after
+				content: ''
+				position: absolute
+				background: transparent
+				height: 100%
+				min-height: 50px
+				width: 50%
+				top: 40%
+				z-index: -1
+				// transform: translateY(-30%)
+				left: -5%
+				border-top: 2px solid #5FB2D6
+				border-left: 2px solid #5FB2D6
+		&-text
+			font-family: 'Roboto', sans-serif
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			color: white
+			text-align: left
+.offer
+	padding-top: 40px
+	padding-bottom: 40px
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 1.2
+		color: #4A72CE
+		text-align: center
+		margin-bottom: 30px
+		+md(font-size, 28px)
+	&__row
+		display: flex
+		justify-content: space-around
+		+md(flex-direction, column)
+	&__columns
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		+md(margin-bottom, 30px)
+	&__column
+		+col()
+		+size(12)
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+.item-offer
+	&__img
+		position: relative
+		text-align: center
+		img
+			display: block
+			width: 100%
+			object-fit: cover
+	&__body
+		position: absolute
+		height: calc(100% - 40px)
+		width: calc(100% - 40px)
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background: rgba(74, 114, 206, 0.5)
+		z-index: 10
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__title
+		font-family: 'Roboto', sans
+		font-weight: 400
+		font-size: 14px
+		color: #ffffff
+		margin-bottom: 15px
+	&__name
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 18px
+		color: #ffffff
+		text-transform: uppercase
+.offer-list
+	font-family: 'Roboto', sans
+	font-weight: 400
+	font-size: 22px
+	line-height: 26px
+	margin-top: 0
+	max-width: 550px
+	+md(font-size, 18px)
+	&__item
+		color: #4A72CE
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		span
+			color: #555555
+.landAbout
+	background: url('../img/landing/about/bg.jpg') no-repeat center
+	background-size: cover
+	padding-top: 30px
+	padding-bottom: 30px
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		bottom: 0
+		left: 0
+		height: 156px
+		width: 100%
+		background: #3653979a
+		z-index: 0
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		height: 720px
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		position: relative
+		z-index: 1
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		color: white
+		text-align: center
+		margin: 0 0 20px 0
+		text-transform: uppercase
+	&__text
+		font-family: 'Roboto', sans-serif
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		color: white
+		text-align: center
+		margin-bottom: 20px
+		width: 80%
+		+md(width, 100%)
+	&__look
+		font-family: 'Roboto', sans-serif
+		font-weight: normal
+		font-size: 18px
+		line-height: 21px
+		color: white
+		text-align: center
+		margin-bottom: 30px
+	&__contact
+		font-family: 'Roboto', sans-serif
+		font-weight: normal
+		font-size: 22px
+		line-height: 26px
+		color: white
+		text-align: center
+		margin-bottom: 10px
+		a
+			font-family: 'Roboto', sans-serif
+			font-weight: bold
+			font-size: 22px
+			line-height: 26px
+			text-decoration: none
+			color: white
+			+md(display, block)
+.landPrice
+	padding-top: 50px
+	padding-bottom: 50px
+	background: #4A72CE
+	&__container
+		+row-flex()
+		justify-content: center
+		align-items: flex-start
+	&__heading
+		+col()
+		+size(6)
+		+size-xl(12)
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 900
+		font-size: 38px
+		line-height: 40px
+		text-transform: uppercase
+		color: #ffffff
+		text-align: center
+		margin: 0 0 10px 0
+		+xl(font-size, 30px)
+		+xl(text-align, center)
+		+md(font-size, 24px)
+		+md(margin, 0)
+	&__descr
+		+col()
+		+size(4)
+		+size-xl(12)
+		+xl(order, -1)
+		+xl(padding-bottom, 30px)
+	&__subtitle
+		font-family: 'Roboto', sans
+		font-weight: 400
+		font-size: 18px
+		line-height: 20px
+		color: #ffffff
+		margin: 0
+.landSlider
+	margin-top: 30px
+	+lg(display, none)
+	&__heading
+		font-family: 'Gotham', sans
+		font-size: 14px
+		line-height: 16px
+		text-align: center
+		font-weight: normal
+		text-transform: uppercase
+		color: #ffffff
+		margin-top: 20px
+		margin-bottom: 30px
+	&__dots
+		display: flex
+		justify-content: space-around
+		align-items: center
+		margin-bottom: 20px
+		&-pipe
+			&:nth-child(1)
+				margin-left: 10px
+			&:nth-child(2)
+				margin-left: 20px
+		span
+			font-family: 'Roboto', sans
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			display: block
+			text-align: center
+			color: #ffffff
+	&__slide
+		display: block
+		margin: 0 auto
+		width: 81%
+/** Landing-3 **/
+.landWay
+	background: url('../img/landing/bg-usa-land.png') no-repeat center
+	background-size: cover
+	background-attachment: fixed
+	min-height: 750px
+	padding-top: 85px
+	padding-bottom: 70px
+.landWayText
+	text-align: center
+	&__heading
+		font-family: 'Gotham', sans
+		font-size: 38px
+		line-height: 115%
+		font-weight: 700
+		text-transform: uppercase
+		color: #ffffff
+		+md(font-size, 30px)
+	&__descr
+		font-family: 'Roboto', sans
+		font-size: 16px
+		line-height: 19px
+		font-weight: normal
+		color: #ffffff
+		max-width: 800px
+		margin: 15px auto 0 auto
+	&__title
+		font-family: 'Gotham', sans
+		font-size: 38px
+		line-height: 115%
+		font-weight: 700
+		text-transform: uppercase
+		color: #ffffff
+		margin-top: 30px
+		+md(font-size, 30px)
+.landWayItems
+	&__title
+		font-family: 'Roboto', sans
+		font-size: 16px
+		line-height: 19px
+		font-weight: normal
+		color: #ffffff
+		max-width: 800px
+		margin: 30px auto 0 auto
+		text-align: center
+	&__container
+		+row-flex()
+		justify-content: center
+		align-items: start
+.landWayCart
+	+col()
+	+size(4)
+	+size-md(8)
+	+size-sm(12)
+	margin-top: 30px
+	&__img
+		position: relative
+		min-height: 180px
+		max-height: 180px
+		overflow: hidden
+		img
+			width: 100%
+			height: 180px
+			object-fit: cover
+	&__text
+		position: absolute
+		width: 100%
+		top: 66%
+		left: 50%
+		transform: translate(-50%,-33%)
+	&__heading
+		font-family: 'Roboto', sans
+		font-size: 14px
+		line-height: 16px
+		font-weight: normal
+		color: #ffffff
+		text-align: center
+	&__title
+		font-family: 'Gotham', sans
+		font-size: 18px
+		line-height: 19px
+		text-transform: uppercase
+		color: #ffffff
+		text-align: center
+	&__btn
+		background: #4A72CE
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&-title
+			font-family: 'Roboto', sans
+			font-size: 14px
+			line-height: 16px
+			font-weight: normal
+			color: #ffffff
+			text-align: center
+			margin-top: 15px
+			b
+				font-family: 'Gotham', sans
+				font-size: 18px
+				line-height: 19px
+				text-transform: uppercase
+				color: #ffffff
+				text-align: center
+		.btn-landing
+			margin: 15px 0
+/** Landing-4 **/
+.landingSituation
+	background: url('../img/landing/covid19.jpg') no-repeat center fixed
+	background-size: cover
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(33, 49, 85, 0.75)
+		z-index: 1
+	&__body
+		position: relative
+		max-width: 1366px
+		margin: 0 auto
+		padding: 50px 30px
+		z-index: 10
+		min-height: 455px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		+md(padding, 30px 15px)
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 700
+		font-size: 38px
+		line-height: 36px
+		text-align: center
+		text-transform: uppercase
+		color: #ffffff
+		margin-bottom: 20px
+		+xl(font-size, 28px)
+	&__descr
+		font-family: 'Roboto', sans-serif
+		font-weight: normal
+		font-size: 14px
+		line-height: 19px
+		text-align: center
+		color: #ffffff
+		margin-top: 10px
+		&_italic
+			font-style: italic
+.landingOpt
+	&__body
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 1920px
+		margin: 0 auto
+		background: #4A72CE
+		+xls-block
+			flex-direction: column
+	&__text
+		flex-basis: 50%
+		text-align: left
+		padding: 0 80px
+		+xls-block
+			flex-basis: 100%
+			padding: 30px 15px
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 700
+		font-size: 38px
+		line-height: 115%
+		color: #ffffff
+		text-transform: uppercase
+		+xl(font-size, 28px)
+	&__descr
+		font-family: 'Roboto', sans-serif
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		color: #ffffff
+		margin-top: 30px
+	&__list
+		font-family: 'Roboto', sans-serif
+		font-weight: bold
+		font-size: 14px
+		line-height: 19px
+		color: #ffffff
+		margin-top: 30px
+		&-title
+			text-transform: uppercase
+		&-num
+			margin-top: 15px
+	&__btn
+		margin-top: 20px
+		display: flex
+		justify-content: flex-start
+	&__img
+		flex-basis: 50%
+		background: url('../img/landing/optimizatia.jpg') no-repeat center
+		background-size: cover
+		min-height: 530px
+		+xls-block
+			flex-basis: 100%
+			width: 100%
+.landingTarif
+	overflow: hidden
+	&__body
+		margin: 0 auto
+		max-width: 1920px
+		padding: 0 15px 40px 15px
+		+md(padding, 0 0 40px 0)
+	&__title
+		font-family: 'Gotham', sans
+		font-weight: 700
+		font-size: 38px
+		line-height: 115%
+		text-align: center
+		text-transform: uppercase
+		color: #4A72CE
+		margin-top: 40px
+		+xl(font-size, 28px)
+	&__columns
+		+row-flex()
+		justify-content: space-between
+		align-items: flex-start
+		+xl(justify-content, space-around)
+	&__cart
+		+col()
+		+size(4)
+		+size-xl(6)
+		+size-md(12)
+		+size-sm(12)
+		+size-xs(12)
+		margin-top: 40px
+		&:first-child .landingTarif__text
+			background: url(../img/landing/tarif-01.jpg) no-repeat center
+			background-size: cover
+		&:nth-child(2) .landingTarif__text
+			background: url(../img/landing/tarif-02.jpg) no-repeat center
+			background-size: cover
+		&:last-child .landingTarif__text
+			background: url(../img/landing/tarif-03.jpg) no-repeat center
+			background-size: cover
+	&__text
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(33, 49, 85, 0.75)
+		table
+			position: relative
+			z-index: 10
+			border-collapse: collapse
+			.landingTarif__text-descr
+				height: 100px
+				text-align: center
+				&_height
+					min-height: 50px
+					height: 50px
+					td
+						&:last-child
+							width: 40%
+				td
+					&:first-child	
+							border-left: none
+				&:last-child
+					td
+						&:nth-child(1)
+							border-bottom: none
+						&:nth-child(2)
+							border-bottom: none
+						&:nth-child(3)
+							border-bottom: none
+						&:nth-child(4)
+							border-bottom: none
+			td
+				font-family: 'Roboto', sans-serif
+				font-size: 10px
+				line-height: 10px
+				font-weight: normal
+				color: #ffffff
+				text-align: left
+				vertical-align: top
+				padding: 10px
+				border-left: 1px solid #fff
+				border-bottom: 1px solid #fff
+				+md(padding, 5px)			
+	&__btn
+		background: #4A72CE
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&-title
+			font-family: 'Roboto', sans
+			font-size: 14px
+			line-height: 16px
+			font-weight: normal
+			color: #ffffff
+			text-align: center
+			margin-top: 15px
+			b
+				font-family: 'Gotham', sans
+				font-size: 18px
+				line-height: 19px
+				text-transform: uppercase
+				color: #ffffff
+				text-align: center
+		.btn-landing
+			margin: 15px 0
+			padding: 10px 25px
+/** Landing Phone Block **/
+.landing-phone
+	&__body
+		background: #4c4c4c
+		padding: 30px 15px
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+		font-family: 'Gotham', sans
+		font-size: 24px
+		line-height: 115%
+	&__text
+		color: #ffffff
+		text-align: center
+		span
+			display: block
+			&:last-child
+				margin-top: 15px
+	&__number
+		margin-top: 15px
+	.btn-landing
+		padding: 10px 25px

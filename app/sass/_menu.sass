@@ -1,0 +1,198 @@
+@import "variables.sass"
+
+.navigation
+	position: relative
+	background: $active
+	z-index: 1
+.navigation-block
+	+md(display, none)
+	position: relative
+	text-align: center
+	z-index: 1
+	a
+		text-decoration: none
+		color: $text-light
+		font-size: 18px
+	ul
+		position: relative
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			position: relative
+			margin: 0 -2px 0 -2px
+			padding: 12px 15px 10px 15px
+			border-bottom: 6px solid transparent
+			z-index: 101
+			transition: border-bottom .5s
+			text-align: left
+			&:hover
+				border-bottom: 6px solid $text-orange
+				transition: border-bottom .5s
+			&:hover ul
+				transition: all .5s ease-in
+				visibility: visible
+				z-index: 100
+				max-height: 1000%
+				transform: translateY(16px)
+				border: none
+			&:hover ul li
+				opacity: 1
+				border: none
+				transition: opacity 1s
+			ul
+				position: absolute
+				padding: 0 1000em
+				margin: 0 -1000em
+				z-index: 99
+				visibility: hidden
+				background: $bg-menu
+				transform: translateY(16px)
+				transition: all .5s ease-out
+				border: none
+				max-height: 0
+				li
+					width: 500px
+					display: block
+					padding: 10px 0
+					opacity: 0
+					transition: opacity .5s
+					border: none
+					a
+						font-size: 16px
+						line-height: 20px
+						color: $text-light
+						transition: color .5s
+						&:hover
+							color: $text-orange
+							transition: color .5s
+/* Мобильное меню */
+.jsmenu
+	position: absolute
+	top: -100vh
+	left: 0
+	display: block
+	width: 100vw
+	transition: top 1s
+	&_active
+		top: 0
+		transition: top 1s
+
+.slinky-menu
+	overflow: hidden
+	transform: translateZ(0)
+
+.slinky-menu>ul
+	left: 0
+	position: relative
+	-webkit-transform: translateZ(0)
+	transform: translateZ(0)
+
+.slinky-menu ul, .slinky-menu li
+	list-style: none
+	margin: 0
+
+.slinky-menu ul
+	width: 100%
+
+.slinky-menu a
+	align-items: center
+	display: flex
+
+.slinky-menu a span
+	flex: 1
+	line-height: 1.4
+	color: $text-light
+	padding-left: 50px
+
+.slinky-menu li ul
+	display: none
+	left: 100%
+	position: absolute
+	top: 0
+
+.slinky-menu .header
+	display: flex
+
+.slinky-menu .header .title
+	flex: 1
+	line-height: 1.4
+	margin: 0
+	order: 1
+
+.slinky-theme-default
+	background: #f6f7f8
+
+.slinky-theme-default .title
+	color: $text-light
+	padding: 2rem
+
+.slinky-theme-default li
+	line-height: 1
+
+.slinky-theme-default a:not(.back)
+	color: #333
+	padding: 25px
+	transition: .5s background
+
+// .slinky-theme-default a:not(.back):hover
+// 	background: rgba(90, 200, 250, 0.25)
+// 	transition: .5s background
+
+// .slinky-theme-default a:not(.back):active
+// 	background: rgba(90, 200, 250, 0.5)
+
+.slinky-theme-default .next::after, .slinky-theme-default .back::before
+	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICAgIDxwYXRoIGQ9Ik0xMi4yMTkgMi4yODFMMTAuNzggMy43MiAxOC4wNjIgMTFIMnYyaDE2LjA2M2wtNy4yODIgNy4yODEgMS40MzggMS40MzggOS05IC42ODctLjcxOS0uNjg3LS43MTl6IiAvPjwvc3ZnPg==) center no-repeat
+	background-size: 1em
+	content: ''
+	height: 100%
+	opacity: 0.25
+	-webkit-transition: 200ms
+	transition: 200ms
+	width: 1em
+
+.slinky-theme-default .next::after
+	margin-left: 1em
+
+.slinky-theme-default .back::before
+	padding: 1em
+	-webkit-transform: scaleX(-1)
+	transform: scaleX(-1)
+
+.slinky-theme-default .next:hover::after, .slinky-theme-default .back:hover::before
+	opacity: 0.75
+
+.slinky-theme-default .next:active::after, .slinky-theme-default .back:active::before
+	opacity: 1
+
+.slinky-menu
+	text-align: left
+
+.slinky-theme-default
+	background-color: rgba(55,65,88,.9)
+
+.slinky-menu .header
+	background-color: $hover-color
+
+.slinky-menu ul
+	padding-left: 0
+
+.slinky-menu ul a
+	text-decoration: none
+
+.slinky-menu ul a:focus
+	outline: none
+
+.slinky-theme-default .next::after,
+.slinky-theme-default .back::before
+	background-image: url(../img/icons/arrow-left.svg)
+	transform: rotate(360deg)
+
+.slinky-theme-default a:not(.back):hover
+	// background-color: #1565c1
+	color: #fff
+
+.slinky-theme-default a:not(.back):hover::after,
+.slinky-theme-default a:not(.back):hover::before
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTQwLjQsMTIxLjNjLTAuOCwwLjgtMS44LDEuMi0yLjksMS4ycy0yLjEtMC40LTIuOS0xLjJjLTEuNi0xLjYtMS42LTQuMiAwLTUuOGw1MS01MS01MS01MWMtMS42LTEuNi0xLjYtNC4yIDAtNS44IDEuNi0xLjYgNC4yLTEuNiA1LjgsMGw1My45LDUzLjljMS42LDEuNiAxLjYsNC4yIDAsNS44bC01My45LDUzLjl6IiBmaWxsPSIjRkZGRkZGIi8+CiAgPC9nPgo8L3N2Zz4K)

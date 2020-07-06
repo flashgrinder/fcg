@@ -1,0 +1,23 @@
+.services {
+    padding: 30px 0 30px 0;
+    &__title {
+        text-align: left;
+    }
+    &__grid {
+        @include row-flex();
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__column {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+        @include size-xs(12);
+        @include md-block {
+            display: flex;
+            justify-content: center;
+        }
+        margin-top: 60px;
+    }
+}

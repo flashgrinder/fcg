@@ -1,0 +1,71 @@
+@import "variables.sass"
+/* ТЕСТОВОЕ МЕНЮ */
+.container
+	background: $active
+	font-family: 'Roboto', sans-serif
+	font-weight: 300
+	position: relative
+.top-menu
+	display: flex
+	justify-content: center
+	list-style: none
+	margin: 0
+	padding: 0
+	background: $active
+	li
+		padding: 15px 15px 12px 15px
+		border-bottom: 6px solid transparent
+		transition: border-bottom .5s
+		&:hover
+			border-bottom: 6px solid #6BD2FF
+			transition: border-bottom .5s
+		a
+			text-transform: uppercase
+			text-decoration: none
+			color: #fff
+		&:hover .submenuwrapp
+			display: flex
+			max-height: 1000%
+			visibility: visible
+			transition: all 1s ease
+		&:hover .submenuwrapp .sub-menu li a
+			opacity: 1
+			transition: all 1.5s color .5s
+			visibility: visible
+		&:hover .submenuwrapp .sub-menu .title
+			opacity: 1
+			transition: all 1.5s
+			visibility: visible
+	.submenuwrapp
+		position: absolute
+		top: 50px
+		left: 0
+		background: $bg-menu
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		max-height: 0
+		visibility: hidden
+		transition: all .5s ease
+		z-index: 1
+		.sub-menu
+			list-style: none
+			margin: 0 15px 0 0
+			padding: 0
+			text-align: center
+			&:last-child
+				margin: 0
+			li
+				border: none
+				padding: 10px
+				a
+					display: block
+					opacity: 0
+					transition: all 1s
+					visibility: hidden
+			.title
+				font-size: 18px
+				border-bottom: 1px solid #fff
+				visibility: hidden
+				transition: all .1s

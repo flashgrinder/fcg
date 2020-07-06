@@ -1,0 +1,29 @@
+.advantage {
+    padding: 30px 0 30px 0;
+    background-image: url('../img/bg/advantage-bg.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    @include sm-block {
+        background-image: none;
+        background-repeat: none;
+        background-position: none;
+    }
+    &__title {
+        text-align: left;
+        margin: 0 0 60px 0;
+    }
+    &__grid {
+        padding-left: 70px;
+        @include md(padding-left, 0);
+    }
+    &__row {
+        max-width: 630px;
+        @include md-block {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__row ~ &__row {
+        margin-top: 60px;
+    }
+}

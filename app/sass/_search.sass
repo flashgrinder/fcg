@@ -1,0 +1,30 @@
+@import "variables.sass"
+
+.search
+	font-family: 'Roboto', sans-serif
+	padding: 50px 0 0 50px
+	h2
+		text-align: center
+		font-weight: 400
+
+.searchResult
+	+row-flex()
+	justify-content: space-between
+	flex-direction: column
+	align-items: center
+	&__container
+		+col()
+		+size(12)
+		text-align: center
+		margin: 50px 0 50px 0
+		padding-bottom: 30px
+		border-bottom: 1px solid rgba(48, 48, 48, .3)
+	&__link
+		font-size: 28px
+		text-decoration: none
+		color: $hover-color
+		+md(font-size, 22px)
+	&__data
+		font-size: 18px
+		padding: 15px 0 0 0
+		+md(font-size, 16px)

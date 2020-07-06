@@ -1,0 +1,144 @@
+.footer {
+    &__holder {
+        &:first-child {
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        &:last-child {
+            @include sm(padding-bottom, 40px);
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+    }
+    &__title {
+        text-align: left;
+        margin-bottom: 60px;
+        @include md(margin-bottom, 30px);
+    }
+    &__info {
+        @include md-block {
+            display: flex;
+            flex-direction: column;
+        }
+        position: relative;
+        z-index: 100;
+    }
+    &__photo {
+        @include md-block {
+            position: relative;
+            left: 0;
+            margin-bottom: -330px;
+            max-width: 400px;
+            margin-top: 30px;
+            align-self: flex-end;
+        }
+        @include sm-block {
+            margin-bottom: -270px;
+            max-width: 360px;
+        }
+        @include to(320px) {
+            margin-bottom: -230px;
+            max-width: 300px;
+        }
+        position: absolute;
+        top: 0;
+        left: -7%;
+        z-index: -1;
+    }
+    &__img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+    &__address {
+        @include row-flex();
+        @include md(order, -1);
+        @include sm-block {
+            flex-direction: column;
+        }
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    &__contacts {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+        @include size-xs(12);
+        @include sm-block {
+            margin-bottom: 60px;
+        }
+    }
+    &__text {
+        margin-top: 20px;
+        &:first-of-type {
+            margin-top: 30px;
+        }
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+    &__number {
+        font-weight: bold;
+    }
+    &__aside {
+        @include md-block {
+            align-items: flex-start;
+        }
+        @include sm-block {
+            margin-top: -70px;
+        }
+        position: relative;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__socials {
+        @include sm(align-self, center);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+    &__icon {
+        text-decoration: none;
+        width: 50px;
+        height: 50px;
+    }
+    &__icon ~ &__icon {
+        margin-left: 50px;
+        @include sm(margin-left, 25px);
+    }
+    &__pic {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+    &__menu {
+        @include sm-block {
+            .menu {
+                &__list {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &__item ~ .menu__item {
+                    margin-top: 20px;
+                }
+            }
+            margin-bottom: 60px;
+            order: -1;
+        }
+        margin-top: 30px;
+    }
+    &__logo {
+        @include sm-block {
+            align-self: center;
+            margin-top: 30px;
+        }
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,36 @@
+.pagination {
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page-numbers {
+        padding: 6px 14px;
+        color: var(--color-dark);
+        text-decoration: none;
+        margin: 0 2px;
+        transition: all .2s linear;
+        &:hover {
+            color: var(--color-white);
+            background-color: var(--color-dark);
+        }
+    }
+    .dots {
+        &:hover {
+            color: var(--color-dark);
+            background-color: transparent;
+        }
+    }
+    .prev, .next {
+        border: 1px solid var(--color-white-gray);
+        color: var(--color-dark);
+        text-decoration: none;
+    }
+    .current {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        &:hover {
+            background-color: var(--color-primary);
+        }
+    }
+}

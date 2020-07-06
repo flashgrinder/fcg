@@ -1,0 +1,78 @@
+.faq {
+    padding: 30px 0 30px 0;
+    &__title {
+        text-align: left;
+        margin-bottom: 60px;
+    }
+    &__details ~ &__details {
+        margin-top: 50px;
+        @include sm(margin-top, 30px);
+    }
+    &__details {
+        position: relative;
+        margin-left: 70px;
+        min-height: 0rem;
+        max-height: 3rem;
+        transition: min-height .15s linear, max-height .5s linear;
+        overflow: hidden;
+        @include sm-block {
+            margin-left: 0;
+            max-height: 4rem;
+        }
+        & .faq__summary {
+            position: relative;
+            display: inline-block;
+            outline: 0;
+            padding-left: 30px;
+            cursor: pointer;
+            &::-webkit-details-marker {
+                display: none;
+            }
+            &::-moz-list-bullet {
+                list-style-type: none;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 20px;
+                height: 20px;
+                background: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=') no-repeat 50% 50% / 20px 20px;
+                transform: translateY(-50%) rotate(0deg);
+                transition: transform .1s linear;
+                
+            }
+            & ~ * {
+                margin-top: 20px;
+                padding-left: 30px;
+                opacity: 0;
+                transition: opacity .5s linear;
+            }
+        }
+        &[open] {
+            min-height: 2em;
+            max-height: 30em;
+            @include sm(max-height, 50em);
+            & .faq__summary {
+                & ~ * {
+                    opacity: 1;
+                    transition: opacity .5s linear;
+                }
+                &::before {
+                    transform: translateY(-50%) rotate(90deg);
+                }
+            } 
+        } 
+    }
+    &__question {
+        display: inline-block;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__answer {
+        margin-top: 20px;
+        padding-left: 30px;
+    }
+}

@@ -1,0 +1,32 @@
+.burger-menu {
+    @include lg(display, flex);
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    &__line {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 3px;
+        background: var(--color-white);
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background: var(--color-white);
+        }
+        &::before {
+            bottom: 0;
+            left: 0;
+            margin-bottom: 8px;
+        }
+        &::after {
+            top: 0;
+            left: 0;
+            margin-top: 8px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.partnersText
+	font-family: 'Roboto', sans-serif
+	background: #ffffff
+	padding-top: 30px
+	padding-bottom: 30px
+	&-title
+		text-align: center
+		font-size: 24px
+		font-weight: 400
+		color: $hover-color
+
+.partnersDescr
+	padding-top: 30px
+	&__text
+		font-size: 16px
+		+sm(font-size, 14px)
+
+.partners
+	font-family: 'Roboto', sans-serif
+	background: #ffffff
+	padding-top: 30px
+	padding-bottom: 50px
+	&-title
+		text-align: center
+		font-size: 24px
+		font-weight: 400
+		color: $hover-color
+
+.partnersBlock
+	display: flex
+	flex-direction: column
+	&__profile
+		+row-flex()
+		justify-content: center
+		align-items: center
+		padding: 30px 0 30px 0
+		border-bottom: 1px solid rgba(48, 48, 48, .25)
+	&__img
+		+col()
+		+size(2)
+		+size-md(4)
+		+size-sm(6)
+		+size-xs(8)
+		border-radius: 50%
+		img
+			width: 100%
+			height: auto
+	&__text
+		+col()
+		+size(10)
+		+size-md(12)
+	&__heading
+		font-size: 18px
+		font-weight: 700
+		color: $hover-color
+		+md-block
+			text-align: center
+			padding-top: 10px
+	&__title
+		font-size: 16px
+		padding: 10px 0 0 0
+		+md(text-align, center)
+	&__phone
+		padding: 10px 0 0 0
+		color: $hover-color
+		display: block
+		text-decoration: none
+		+md(text-align, center)
+	&__email
+		padding: 10px 0 0 0
+		+md(text-align, center)
+	&__descr
+		padding: 10px 0 0 0
+		+sm(font-size, 14px)

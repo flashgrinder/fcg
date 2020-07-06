@@ -1,0 +1,45 @@
+.topping {
+	&_bg_default {
+		@include md(background-position, center);
+		@include sm(background-size, cover);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center left;
+	}
+	&_bg_full {
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+	&__body {
+		@include lg(min-height, 350px);
+		@include sm(align-items, flex-end);
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		min-height: 550px;
+	}
+	&__head {
+		@include lg(width, 100vw);
+		@include md-block {
+			padding: 10px;
+		}
+		width: 60vw;
+		padding: 20px;
+		background-color: var(--color-blue-opaciti-85);
+	}
+	&__title {
+		text-align: left;
+	}
+	&__subtitle {
+		text-align: left;
+		margin-top: 20px;
+	}
+	&__actions {
+		@include sm(justify-content, center);
+		display: flex;
+		justify-content: start;
+		margin-top: 20px;
+	}
+}

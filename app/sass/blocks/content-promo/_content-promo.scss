@@ -1,0 +1,17 @@
+.content-promo {
+	&__title {
+		@include md(margin-bottom, 40px);
+		margin-bottom: 50px;
+	}
+	&__subtitle {
+		@include md(margin-bottom, 30px);
+		margin-bottom: 40px;
+	}
+	&__descr ~ &__descr {
+		@include md(margin, 25px 0);
+		margin: 30px 0;
+	}
+	&__checklist {
+		margin-top: 30px;
+	}
+}

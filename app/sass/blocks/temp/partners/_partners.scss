@@ -1,0 +1,32 @@
+.partners {
+    padding: 30px 0 30px 0;
+    &__title {
+        text-align: left;
+        margin-bottom: 60px;
+    }
+    &__grid {
+        @include row-flex();
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__column {
+        @include col();
+        @include size(3);
+        @include size-sm(12);
+        @include sm-block {
+            margin-bottom: 60px;
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+        margin-bottom: 30px;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+    }
+    &__img {
+        height: auto;
+    }
+}

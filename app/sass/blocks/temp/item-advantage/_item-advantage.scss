@@ -1,0 +1,24 @@
+.item-advantage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__icon {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 40px;
+        @include sm(margin-right, 20px)
+    }
+    &__img {
+        @include sm-block {
+            height: 50px;
+            width: 50px; 
+        }
+    }
+}
