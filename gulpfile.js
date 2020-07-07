@@ -65,7 +65,7 @@ function sassproc() {
 	// .pipe(concat('style.min.css'))
 	.pipe(gcmq())
 	.pipe(postcss([autoprefixer({
-            grid: true,пше
+            grid: true,
             cascade: true
 		}
 	)]))
