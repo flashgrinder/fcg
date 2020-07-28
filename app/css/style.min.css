@@ -3892,6 +3892,7 @@
   color: white;
   text-align: left;
   -webkit-align-self: start;
+              -ms-grid-row-align: start;
           align-self: start;
   margin: 15px 0;
   position: relative;
@@ -6545,12 +6546,14 @@ img {
 
   .footer-block__fincom-logo {
     -webkit-align-self: center;
+                -ms-grid-row-align: center;
             align-self: center;
     padding-top: 20px;
   }
 
   .footer-block__fincom-logo-img {
     -webkit-align-self: center;
+                -ms-grid-row-align: center;
             align-self: center;
   }
 

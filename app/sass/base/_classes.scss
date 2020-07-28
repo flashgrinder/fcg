@@ -78,12 +78,21 @@
     }
     &_medium {
         font-size: 24px;
-    }
+	}
+	&_small {
+		font-size: 20px;
+	}
     &_blue {
         color: var(--color-blue);
     }
     &_white {
         color: var(--color-white);
+	}
+    &_black {
+        color: var(--color-black);
+	}
+    &_blackish {
+        color: var(--color-blackish);
 	}
 	&_w-black {
 		font-weight: 900;
@@ -130,6 +139,9 @@
 	&_s-normal {
 		font-size: 16px;
 	}
+	&_s-small {
+		font-size: 14px;
+	}
 	&_w-light {
 		font-weight: 300;
 	}
@@ -141,5 +153,8 @@
 	}
 	&_w-bold {
 		font-weight: 700;
+	}
+	&_uppercase {
+		text-transform: uppercase;
 	}
 }

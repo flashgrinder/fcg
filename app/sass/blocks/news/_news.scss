@@ -1,0 +1,39 @@
+.news {
+	padding: 30px 0;
+	&__heading {
+		@include sm(padding-right, 50px);
+		@include xs(padding-right, 0);
+		position: relative;
+		display: inline-block;
+		margin-bottom: 50px;
+		padding-right: 65px;
+		&::before {
+			@include sm(width, 25px);
+			@include xs(display, none);
+			content: "";
+			position: absolute;
+			width: 50px;
+			height: 2px;
+			background: var(--color-blue);
+			z-index: 1;
+			margin-left: 0;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__grid {
+		@include row-flex();
+		padding-bottom: 10px;
+		overflow: hidden;
+	}
+	&__column {
+		@include col();
+		@include size(4);
+		@include size-xls(6);
+		@include md(flex, 1 0 auto);
+		@include size-sm(12);
+		@include size-xs(12);
+		margin-bottom: 30px;
+	}
+}

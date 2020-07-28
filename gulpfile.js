@@ -30,8 +30,8 @@ const source = {
 		img:   './app/img/**/*.*',
 		js:    './app/js/',
 		libs:  [
-			'./app/libs/jquery-3.3.1.js',
-			'./app/libs/common.js'
+			'./app/libs/common.js',
+			'./app/libs/new-scripts.js'
 		]
 	},
 	build: {
