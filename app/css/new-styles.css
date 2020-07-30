@@ -317,6 +317,47 @@ img {
   opacity: 1;
 }
 
+/* Button-to-top */
+
+.button-to-top {
+  position: fixed;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-white);
+  box-shadow: 0 5px 20px rgba(34, 34, 34, 0.1);
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  bottom: 15px;
+  left: 15px;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.button-to-top.is-show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+}
+
+.button-to-top__img {
+  pointer-events: none;
+  width: 25px;
+  height: 25px;
+}
+
 /* Page */
 
 .page {

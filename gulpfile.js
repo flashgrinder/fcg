@@ -31,6 +31,7 @@ const source = {
 		js:    './app/js/',
 		libs:  [
 			'./app/libs/common.js',
+			'./app/libs/smoothscroll.js',
 			'./app/libs/new-scripts.js'
 		]
 	},
