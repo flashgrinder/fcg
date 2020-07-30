@@ -68,6 +68,34 @@ img {
   max-width: 100%;
 }
 
+/* Animation */
+
+@-webkit-keyframes spinner-pulse {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes spinner-pulse {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
 /* Base Classes */
 
 /* Containers */
@@ -237,6 +265,57 @@ img {
 }
 
 /* Blocks */
+
+/* Preloader */
+
+.page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9998;
+}
+
+.page-preloader.is-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-preloader__pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  background-color: #337ab7;
+  border-radius: 100%;
+  -webkit-animation: spinner-pulse 1.0s infinite ease-in-out;
+          animation: spinner-pulse 1.0s infinite ease-in-out;
+}
+
+/* Pogress-bar */
+
+.progress-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4px;
+  background: var(--color-blue);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 9998;
+  opacity: 1;
+}
 
 /* Page */
 

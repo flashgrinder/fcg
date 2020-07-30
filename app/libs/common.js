@@ -1,32 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-	// // Прелоадер
-	// let imgs = document.images,
-	// 	imagesTotalCount = imgs.length,
-	// 	imagesLoadedCount = 0,
-	// 	preloader = document.querySelector('.preloader'),
-	// 	percDisplay = document.querySelector('.load_perc');
-	// 	percDisplay.innerHTML = '0%';
+	// Прелоадер
+	let imgs = document.images,
+		imagesTotalCount = imgs.length,
+		imagesLoadedCount = 0,
+		preloader = document.querySelector('.page-preloader');
 	
-	// for (let i = 0; i < imagesTotalCount; i++) {
-	// 	var imageClone = new Image();
-	// 	imageClone.onload = imageLoaded;
-	// 	imageClone.onerror = imageLoaded;
-	// 	imageClone.src = imgs[i].src;
-	// }
+	for (let i = 0; i < imagesTotalCount; i++) {
+		var imageClone = new Image();
+		imageClone.onload = imageLoaded;
+		imageClone.onerror = imageLoaded;
+		imageClone.src = imgs[i].src;
+	}
 
-	// function imageLoaded() {
-	// 	imagesLoadedCount++;
-	// 	percDisplay.innerHTML = (( (100 / imagesTotalCount) * imagesLoadedCount) << 0) + '%';
+	function imageLoaded() {
+		imagesLoadedCount++;
 
-	// 	if (imagesLoadedCount >= imagesTotalCount) {
-	// 		setTimeout(function(){
-	// 			if(!preloader.classList.contains('hide'))
-	// 			preloader.classList.add('hide');
-	// 		}, 1000)
-	// 	}
-	// }
+		if (imagesLoadedCount >= imagesTotalCount) {
+			setTimeout(function(){
+				if(!preloader.classList.contains('is-hide'))
+				preloader.classList.add('is-hide');
+			}, 1000)
+		}
+	}
 	// Прогресс бар
-	var progress = document.querySelector('.progress');
+	var progress = document.querySelector('.progress-bar');
 
 	window.addEventListener('scroll', progressBar);
 

@@ -6,9 +6,15 @@
 @import "./base/variables";
 /* Base */
 @import "./base/base";
+/* Animation */
+@import "./base/animation";
 /* Base Classes */
 @import "./base/classes";
 /* Blocks */
+/* Preloader */
+@import "./blocks/preloader/preloader";
+/* Pogress-bar */
+@import "./blocks/progress-bar/progress-bar";
 /* Page */
 @import "./blocks/page/page";
 /* Button */
