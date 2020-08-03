@@ -23,11 +23,30 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="img/icons/fincomfav.png" type="image/x-icon">
 	<!-- Style -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/new-styles.css">
 </head>
 <body>
-	<!-- PROGRESS BAR -->
-	<div class="progress"></div>
+
+	<!-- PRELOADER -->
+	<div class="page-preloader">
+		<div class="page-preloader__pulse"></div>
+	</div>
+	<!-- /. PRELOADER -->
+
+	<!-- PROGRESS-BAR -->
+	<div class="progress-bar"></div>
+	<!-- /. PROGRESS-BAR -->
+
+	<!-- BUTTON TO TOP -->
+	<div class="button-to-top">
+		<svg class="button-to-top__img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+			<path style="fill:#2196F3;" d="M252.885,24.443c-4.165-4.164-10.917-4.164-15.083,0L3.136,259.109 c-2.007,2.001-3.135,4.718-3.136,7.552v192c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134 l227.115-227.136l227.115,227.136c4.16,4.171,10.914,4.179,15.085,0.019c2.011-2.006,3.139-4.731,3.134-7.571v-192 c0.005-2.831-1.115-5.548-3.115-7.552L252.885,24.443z"/>
+		</svg>
+	</div>
+	<!-- /. BUTTON TO TOP -->
+	
 	<!-- HEADER -->
 	<header class="header">
 		<div class="wrapper">
@@ -60,20 +79,25 @@
 				</a>
 				<div class="header-block__search">
 					<div class="header-block__search-icon">
-						<img src="img/icons/search.png" alt="Поиск">
+						<img src="img/icons/search.svg" alt="Поиск">
 					</div>
 					<form action="">
 						<input class="header-block__search-input" type="search" name="search" id="" placeholder="Search">
 					</form>
 				</div>
+				<div class="header-block__lang">
+					<div class="header-block__lang-icon">
+						<img src="img/icons/lang.svg" alt="Поиск">
+					</div>
+				</div>
 				<div class="header-block__map">
 					<div class="header-block__map-icon">
-						<img src="img/icons/map.png" alt="Местоположение">
+						<img src="img/icons/map.svg" alt="Местоположение">
 					</div>
 					<div class="header-block__map-country">
-						<a class="header-block__map-country-israel href="#" >Israel</a>
-						<a class="header-block__map-country-usa href="#" >USA</a>
-						<a class="header-block__map-country-russia href="#" >Russia</a>
+						<a class="header-block__map-country-israel" href="contacts.html#usa" >Israel</a>
+						<a class="header-block__map-country-usa" href="contacts.html#usa" >USA</a>
+						<a class="header-block__map-country-russia" href="contacts.html#usa" >Russia</a>
 					</div>
 				</div>
 				<div class="header-block__mobile">
@@ -84,6 +108,8 @@
 			</div>
 		</div>
 	</header>
+	<!-- /. HEADER -->
+
 	<!-- MOBILE LOCATION AND SEARCH BLOCK -->
 	<div class="header-mob">
 		<div class="header-mob__search">
@@ -93,12 +119,34 @@
 			</form>
 		</div>
 	</div>
+	<div class="header-lang">
+		<div class="header-lang__mob">
+			<li class="lang-item"><a href="">Eng.</a></li>
+			<li class="lang-item"><a href="">Rus.</a></li>
+		</div>
+	</div>
 	<div class="header-cont">
 		<div class="header-cont__country">
-			<a class="header-cont__country-link" href="#">USA</a>
-			<a class="header-cont__country-link" href="#">Israel</a>
-			<a class="header-cont__country-link" href="#">Russia</a>
+			<a class="header-cont__country-link" href="contacts.html#usa">USA</a>
+			<a class="header-cont__country-link" href="contacts.html#israel">Israel</a>
+			<a class="header-cont__country-link" href="contacts.html#russia">Russia</a>
 		</div>
+	</div>
+
+	<div class="phones-block">
+		<div class="phones-block__item">
+			<span>Россия: </span>
+			<a href="tel: 8-800-500-13-18" class="phones-block__link"> 8-800-500-13-18</a>
+		</div>
+		<div class="phones-block__item">
+			<span>Израиль: </span>
+			<a href="tel: +972-54-491-1983" class="phones-block__link"> +972-54-491-1983</a>
+		</div>
+		<div class="phones-block__item">
+			<span>США: </span>
+			<a href="tel: +1-786-450-1706" class="phones-block__link"> +1-786-450-1706</a>
+		</div>
+		<a href="#" class="btn-landing btn-modal">Заказать консультацию</a>
 	</div>
 	<!-- MENU -->
 	<div class="navigation">
@@ -180,105 +228,146 @@
 			</nav>
 		</div>
 	</div>
-	<!-- NEWS BLOCK -->
-	<main>
-		<div class="main-news">
-			<h3>Our News</h3>
-			<div class="wrapper">
-				<div class="news-block">
-					<div class="news-block__wrapper">
-						<a class="news-block__wrapper-img" href="news-single.html">
-							<img src="https://via.placeholder.com/400" alt="">
-						</a>
-						<div class="news-block__wrapper-text">
-							<a href="#">
-								Strategic Business Development
-							</a>
-							<p>
-								Our lawers, business brokers, tax advisors and accountans work in close cooperation to find optimal investment and management solutions through your business development, grow or expansion.
-							</p>
-						</div>
-					</div>
-					<div class="news-block__wrapper">
-						<a class="news-block__wrapper-img" href="#">
-							<img src="https://via.placeholder.com/400" alt="">
-						</a>
-						<div class="news-block__wrapper-text">
-							<a href="#">
-								The Best Solution to Complex Problems
-							</a>
-							<p>
-								Our lawers, business brokers, tax advisors and accountans work in close cooperation to find optimal investment and management solutions through your business development, grow or expansion.
-							</p>
-						</div>
-					</div>
-					<div class="news-block__wrapper">
-						<a class="news-block__wrapper-img" href="#">
-							<img src="https://via.placeholder.com/700" alt="">
-						</a>
-						<div class="news-block__wrapper-text">
-							<a href="#">
-								Compehensive Legal Assistance
-							</a>
-							<p>
-								Our lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawersOur lawers, business brokers, tax advisors and accountans work in close cooperation to find optimal investment and management solutions through your business development, grow or expansion.
-							</p>
-						</div>
-					</div>
-					<div class="news-block__wrapper">
-						<a class="news-block__wrapper-img" href="#">
-							<img src="https://via.placeholder.com/400" alt="">
-						</a>
-						<div class="news-block__wrapper-text">
-							<a href="#">
-								Compehensive Legal Assistance
-							</a>
-							<p>
-								Our lawers, business brokers, tax advisors and accountans work in close cooperation to find optimal investment and management solutions through your business development, grow or expansion.
-							</p>
-						</div>
-					</div>
-					<div class="news-block__wrapper">
-						<a class="news-block__wrapper-img" href="#">
-							<img src="https://via.placeholder.com/400" alt="">
-						</a>
-						<div class="news-block__wrapper-text">
-							<a href="#">
-								Compehensive Legal Assistance
-							</a>
-							<p>
-								Our lawers, business brokers, tax advisors and accountans work in close cooperation to find optimal investment and management solutions through your business development, grow or expansion.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+
+	<main class="main page__container">
+		
+		<!-- MAIN FORM -->
+		<div class="form-box bg_blue page__container">
+			<h3 class="form-box__title form-box__title_center title title_white title_medium title_w-medium">
+				Связаться с нами:
+			</h3>
+			<form class="form container">
+				<input type="text" class="form__input" placeholder="Имя">
+				<input type="text" class="form__input" placeholder="Телефон">
+				<input type="text" class="form__input" placeholder="E-mail">
+				<input type="submit" value="Отправить" class="form__input form__input_submit button button-primary">
+			</form>
 		</div>
+		<!-- /. MAIN FORM -->
+
 	</main>
+
+
+
 	<!-- FOOTER -->
 	<footer class="footer">
 		<div class="wrapper">
+			<div class="footer-services">
+				<p>Услуги</p>
+			</div>
 			<div class="footer-block">
-				<div class="footer-block__menu-one">
-					<ul class="footer-block__menu-one-item">
-						<li><a href="#">Israel Fincom Group</a></li>
-						<li><a href="#">Russian Fincom Group</a></li>
-						<li><a href="#">USA Fincom Group</a></li>
-					</ul>
+				<div class="footer-block__wrapp">
+					<a class="footer-block__name" href="#">СОПРОВОЖДЕНИЕ БИЗНЕСА</a>
+					<div class="footer-block__menu">
+						<ul class="footer-block__menu-item">
+							<li><a href="#">Тосэр резидентство</a></li>
+							<li><a href="#">Подбор института государственной поддержки</a></li>
+							<li><a href="#">Сопровождение участия в тендерах и конкурсах</a></li>
+							<li><a href="#">Налоговая оптимизация</a></li>
+							<li><a href="#">Интеллектуальная собственность и права в сфере диджитал</a></li>
+							<li><a href="#">Сопровождение сделок по приобретению бизнеса, DUE DILIGENCE</a></li>
+							<li><a href="#">HR сервис и комплексное сопровождение трудовых отношений</a></li>
+							<li><a href="#">Комплексное сопровождение бизнеса</a></li>
+							<li><a href="#">Управленческий учет</a></li>
+							<li><a href="#">Международное корпоративное развитие</a></li>
+							<li><a href="#">Анализ и оптимизация бизнес-процессов</a></li>
+							<li><a href="#">Юридические услуги для бизнеса</a></li>
+							<li><a href="#">Защита интеллектуальной собственности</a></li>
+							<li><a href="#">Бухгалтерское сопровождение бизнеса</a></li>
+							<li><a href="#">Digital Бутик</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="footer-block__menu-two">
-					<ul class="footer-block__menu-two-item">
-						<li><a href="#">Accounting & TAX Advisory</a></li>
-						<li><a href="#">VAT Registration In Russia For Online Service Providers</a></li>
-						<li><a href="#">Business Development</a></li>
-						<li><a href="#">Dual-Residency Services</a></li>
-						<li><a href="#">Marketing & Promotion</a></li>
-					</ul>
+				<div class="footer-block__wrapp order">
+					<a class="footer-block__name" href="#">СУДЕБНАЯ ПРАКТИКА</a>
+					<div class="footer-block__menu">
+						<ul class="footer-block__menu-item">
+							<li><a href="#">Сопровождение уголовного преследования</a></li>
+							<li><a href="#">Защита прав на интеллектуальныю собственность</a></li>
+							<li><a href="#">Арбитраж</a></li>
+							<li><a href="#">Налоговые споры</a></li>
+							<li><a href="#">Комплексная защита от рейдерских захватов и недружественных поглощений</a></li>
+							<li><a href="#">Корпоративные споры</a></li>
+							<li><a href="#">Исполнительное производство</a></li>
+							<li><a href="#">ЕСПЧ</a></li>
+						</ul>
+					</div>
+					<div class="footer-block__public">
+						Публикации
+					</div>
+					<div class="footer-block__menu-sub">
+						<ul class="footer-block__menu-sub-item">
+							<li><a href="#">Опрос членов советов директоров российских компаний</a></li>
+							<li><a href="#">Путеводители инвестора</a></li>
+							<li><a href="#">Налоговые обзоры</a></li>
+							<li><a href="#">Юридические обзоры</a></li>
+							<li><a href="#">Налоговые споры</a></li>
+							<li><a href="#">Книга «МСФО: вопросы применения»</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-block__wrapp">
+					<a class="footer-block__name" href="#">МЕЖДУНАРОДНАЯ ПРАКТИКА</a>
+					<div class="footer-block__menu">
+						<ul class="footer-block__menu-item">
+							<li><a href="#">Открытие компаний-резидентов с иностранным участием</a></li>
+							<li><a href="#">Международные холдинговые компании</a></li>
+							<li><a href="#">Tax & legal консалтинг в международной практике</a></li>
+							<li><a href="#">Международная налоговая оптимизация</a></li>
+							<li><a href="#">Валютные сделки</a></li>
+							<li><a href="#">Трансграничные денежные переводы</a></li>
+							<li><a href="#">КИК, валютные и налоговые резиденты, амнистия капиталов</a></li>
+							<li><a href="#">Международный коммерческий арбитраж</a></li>
+							<li><a href="#">Recovering assets</a></li>
+							<li><a href="#">Обеспечительные меры</a></li>
+							<li><a href="#">VAT сервис для нерезидентов	в сфере IT</a></li>
+						</ul>
+					</div>
+					<div class="footer-block__public">
+						Стартапы
+					</div>
+					<div class="footer-block__menu-sub">
+						<ul class="footer-block__menu-sub-item">
+							<li><a href="#">POKOLENIE F</a></li>
+							<li><a href="#">ECOFRIENDS</a></li>
+							<li><a href="#">НОВЫЙ СТАРТ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-block__wrapp">
+					<a class="footer-block__name" href="#">АНТИКРИЗИСНЫЕ РЕШЕНИЯ</a>
+					<div class="footer-block__menu">
+						<ul class="footer-block__menu-item">
+							<li><a href="#">Ликвидация обществ</a></li>
+							<li><a href="#">Комплексное сопровождение процедуры банкротства</a></li>
+							<li><a href="#">Защита прав кредиторов в ходе процедур банкротства</a></li>
+							<li><a href="#">Защита менеджемента и собственников в ходе процедур банкротства</a></li>
+							<li><a href="#">Обособленные споры в делах о банкротстве</a></li>
+							<li><a href="#">Организация и комплексное сопровожжение торгов в ходе процедуры банкротства</a></li>
+						</ul>
+					</div>
+					<div class="footer-block__public">
+						Компания
+					</div>
+					<div class="footer-block__menu-sub">
+						<ul class="footer-block__menu-sub-item">
+							<li><a href="#">FINCOM RUSSIA</a></li>
+							<li><a href="#">FINCOM ISRAEL</a></li>
+							<li><a href="#">FINCOM USA</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__fwrapp">
+				<div class="footer__fwrapp-text">
+					<p>
+						FINCOM GROUP ALL RIGHTS RESERVED 2019
+					</p>
 				</div>
 				<div class="footer-block__fincom">
 					<div class="footer-block__fincom-social">
 						<div class="footer-block__fincom-social-title">
-						Follow us:
+							Follow us:
 						</div>
 						<a class="footer-block__fincom-social-img" href="#">
 							<img src="img/social/facebook.png" alt="facebook">
@@ -297,15 +386,15 @@
 						<div class="footer-block__fincom-logo-img">
 							<img src="img/icons/fincom-logo.png" alt="">
 						</div>
-						<div class="footer-block__fincom-logo-text">
-							FINCOM GROUP <br> ALL RIGHTS RESERVED 2019
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
+
 	<!--Подключение скриптов-->
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/glide.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 	<!--Подключение скриптов КОНЕЦ-->
 </body>
