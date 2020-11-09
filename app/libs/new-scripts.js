@@ -64,11 +64,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	/* Glide.js Slider */
 
-    let slider = document.querySelector('.glide');
+    let sliderNews = document.querySelector('.glide_news');
+	let sliderMain = document.querySelector('.glide_main');
 
-	if (slider) {
+	function generateBulletsAndMountGlide(el, nameSlider, nameClass,) {
+		let bulletCount = document.querySelectorAll(`${nameSlider} .glide__slide`).length;
+		let bulletWrapper = document.querySelector(nameClass);
+	
+		for (let index = 0; index < bulletCount; index++) {
+			const button = document.createElement('button');
+			button.className = 'glide__bullet';
+			button.setAttribute("data-glide-dir", '='+index);
+	
+			bulletWrapper.appendChild(button);
+		}
+	
+		el.mount();
+	}
 
-		let glide = new Glide(slider, {
+	if (sliderNews || sliderMain) {
+
+		let glideMain = new Glide(sliderMain, {
+			type: 'carousel',
+			gap: 30,
+			startAt: 0,
+			perView: 1,
+			animationDuration: 1000
+		});
+
+		// glideMain.mount();
+		generateBulletsAndMountGlide(glideMain, '.glide_main', '.slider__bullets');
+
+		let glideNews = new Glide(sliderNews, {
 			type: 'carousel',
 			gap: 30,
 			startAt: 0,
@@ -88,8 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 
-		glide.mount();
+		// glideNews.mount();
+		generateBulletsAndMountGlide(glideNews, '.glide_news','.news__bullets');
 	}
 	/* Glide.js Slider */
-	
+
 });
