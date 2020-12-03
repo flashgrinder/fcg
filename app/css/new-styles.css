@@ -401,29 +401,59 @@ img {
   padding: 30px 0;
 }
 
-.slider__body {
+.slider__content {
+  display: block;
+  margin-bottom: 25px;
+  height: auto;
+  border-radius: 8px;
   padding: 0 30px;
 }
 
-.slider__content {
-  display: block;
-  border-radius: 28px;
-  margin-bottom: 25px;
-}
-
 .slider__picture {
-  border-radius: 28px;
-  overflow: hidden;
+  display: inline-block;
 }
 
 .slider__picture,
 .slider__img {
-  display: block;
   width: 100%;
   height: 100%;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.slider__arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all .2s ease-in-out;
+  box-shadow: 0 0.5rem 4rem 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 0;
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+  outline: 0;
+}
+
+.slider__arrow--prev {
+  left: 30px;
+  border-right: 1px solid var(--color-white);
+}
+
+.slider__arrow--next {
+  right: 30px;
+  border-left: 1px solid var(--color-white);
+}
+
+.slider__arrow-svg {
+  fill: var(--color-white);
 }
 
 /* Form */
