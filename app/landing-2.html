@@ -18,25 +18,34 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	
 	<title>Fincom Group</title>
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="img/icons/fav-FC.png" type="image/x-icon">
 	<!-- Style -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/new-styles.css">
 </head>
-<body>
+<body class="page">
+
 	<!-- PRELOADER -->
-	<div class="preloader">
-		<div class="loader"></div>
-		<span class="load_perc">0%</span>
+	<div class="page-preloader">
+		<div class="page-preloader__pulse"></div>
 	</div>
-	<!-- PROGRESS BAR -->
-	<div class="progress"></div>
-	<!-- ARROW UP -->
-	<div class="arrow-up" id="button">
-		<img src="img/icons/UP.svg" alt="arrow">
+	<!-- /. PRELOADER -->
+
+	<!-- PROGRESS-BAR -->
+	<div class="progress-bar"></div>
+	<!-- /. PROGRESS-BAR -->
+
+	<!-- BUTTON TO TOP -->
+	<div class="button-to-top">
+		<svg class="button-to-top__img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+			<path style="fill:#2196F3;" d="M252.885,24.443c-4.165-4.164-10.917-4.164-15.083,0L3.136,259.109 c-2.007,2.001-3.135,4.718-3.136,7.552v192c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134 l227.115-227.136l227.115,227.136c4.16,4.171,10.914,4.179,15.085,0.019c2.011-2.006,3.139-4.731,3.134-7.571v-192 c0.005-2.831-1.115-5.548-3.115-7.552L252.885,24.443z"/>
+		</svg>
 	</div>
+	<!-- /. BUTTON TO TOP -->
+	
 	<!-- HEADER -->
 	<header class="header">
 		<div class="wrapper">
@@ -72,7 +81,7 @@
 						<img src="img/icons/search.svg" alt="Поиск">
 					</div>
 					<form action="">
-						<input class="header-block__search-input" type="search" name="search" placeholder="Search">
+						<input class="header-block__search-input" type="search" name="search" id="" placeholder="Search">
 					</form>
 				</div>
 				<div class="header-block__lang">
@@ -98,11 +107,13 @@
 			</div>
 		</div>
 	</header>
+	<!-- /. HEADER -->
+
 	<!-- MOBILE LOCATION AND SEARCH BLOCK -->
 	<div class="header-mob">
 		<div class="header-mob__search">
 			<form class="header-mob__search-form" action="">
-				<input type="search" name="searchmobile">
+				<input type="search" name="searchmobile" id="">
 				<input type="button" value="Search">
 			</form>
 		</div>
@@ -118,6 +129,39 @@
 			<a class="header-cont__country-link" href="contacts.html#usa">USA</a>
 			<a class="header-cont__country-link" href="contacts.html#israel">Israel</a>
 			<a class="header-cont__country-link" href="contacts.html#russia">Russia</a>
+		</div>
+	</div>
+
+	<div class="phones-block">
+		<div class="phones-block__item">
+			<span>Россия: </span>
+			<a href="tel: 8-800-500-13-18" class="phones-block__link"> 8-800-500-13-18</a>
+		</div>
+		<div class="phones-block__item">
+			<span>Израиль: </span>
+			<a href="tel: +972-54-491-1983" class="phones-block__link"> +972-54-491-1983</a>
+		</div>
+		<div class="phones-block__item">
+			<span>США: </span>
+			<a href="tel: +1-786-450-1706" class="phones-block__link"> +1-786-450-1706</a>
+		</div>
+		<a href="#" class="btn-landing btn-modal">Заказать консультацию</a>
+	</div>
+
+	<div class="modalBlock">
+		<div class="modalBlock__overlay"></div>
+		<div class="modalBlock__wrapp">
+			<div class="modalBlock__form">
+				<h3 class="modalBlock__title">
+					Заказать консультацию
+				</h3>
+				<form action="">
+					<input class="name" type="text" name="name" placeholder="Имя">
+					<input class="phone" type="tel" name="phone" placeholder="Телефон">
+					<input class="email" type="email" name="email" placeholder="Email">
+					<input class="btn" type="submit" value="Отправить">
+				</form>
+			</div>
 		</div>
 	</div>
 
@@ -201,23 +245,27 @@
 			</nav>
 		</div>
 	</div>
-	<section class="busplan-screen" style="background-image: url('./img/accounting.jpg')">
-		<div class="wrapper">
-			<div class="busplan-block">
-				<h1>
-					Accounting & Tax Preparation Services
-				</h1>
-              	<div class="strategic-block__text">
-					<p>
-						Personalized financial guidance to individuals and businesses
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- LANDING WRAPP -->
-	<main class="landingMain">
+	<main class="main page__container landingMain">
+
+        <section class="topping topping_bg_default bg_white" style="background-image: url('https://fc-g.com/wp-content/uploads/2020/07/3986413.jpg')">
+            <div class="topping__body">
+                <div class="topping__head">
+                    <h1 class="topping__title title title_white title_big title_w-bold title_uppercase">
+                        Бухгалтерское сопровождение бизнеса    
+                    </h1>
+                    <p class="topping__subtitle text text_white text_s-normal">
+                        Оптимизируйте свои расходы на главного бухгалтера, налогового специалиста и юриста
+                    </p>
+                    <div class="topping__actions">
+                        <a href="javascript:;" class="button button-primary btn-modal">
+                            Оставить заявку
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 		<div class="landApproach">
 			<h3 class="landApproach__title">
@@ -310,83 +358,75 @@
 			</div>	
 		</div>
 
-		<div class="offer wrapper">
-			<div class="offer__title">
-				Что мы предлагаем?
-			</div>
-			<div class="offer__row">
-				<div class="offer__columns">
-					<div class="offer__column">
-						<div class="item-offer">
-							<div class="item-offer__img">
-								<img src="img/landing/img-1.jpg" alt="">
-								<div class="item-offer__body">
-									<div class="item-offer__title">
-										Квалифицированного
-									</div>
-									<div class="item-offer__name">
-										Бухгалтера
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="offer__column">
-						<div class="item-offer">
-							<div class="item-offer__img">
-								<img src="img/landing/img-2.jpg" alt="">
-								<div class="item-offer__body">
-									<div class="item-offer__title">
-										Квалифицированного
-									</div>
-									<div class="item-offer__name">
-										Юриста
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="offer__column">
-						<div class="item-offer">
-							<div class="item-offer__img">
-								<img src="img/landing/img-3.jpg" alt="">
-								<div class="item-offer__body">
-									<div class="item-offer__title">
-										Квалифицированного
-									</div>
-									<div class="item-offer__name">
-										Налогового консультанта
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<ul class="offer-list">
-					<li class="offer-list__item">
-						<span>Организовать и контролировать бухгалтерский учет</span> 
-					</li>
-					<li class="offer-list__item">
-						<span>Разработать учетную политику</span> 
-					</li>
-					<li class="offer-list__item">
-						<span>Избежать штрафов и доначислений</span> 
-					</li>
-					<li class="offer-list__item">
-						<span>Оптимизировать налоговую базу</span> 
-					</li>
-					<li class="offer-list__item">
-						<span>Контролировать расчеты заработной платы </span> 
-					</li>
-					<li class="offer-list__item">
-						<span>Рассчитать налоги и страховые взносы</span> 
-					</li>
-					<li class="offer-list__item">
-						<span>Составить и передать отчетность в налоговые органы и внебюджетные фонды</span> 
-					</li>
-				</ul>	
-			</div>
-		</div>
+		<section class="offer bg_white">
+            <div class="offer__body container">
+                <div class="offer__title title title_big title_blue title_w-black">
+                    Что мы предлагаем?
+                </div>
+                <div class="offer__row">
+                    <div class="offer__item">
+                        <div class="offer__item-content">
+                            <div class="offer__item-rectangle-bg">
+                                <div class="offer__item-bg">
+                                    <img class="offer__item-img" src="img/landing/img-1.jpg" alt="">
+                                </div>
+                                <div class="offer__item-overlay">
+                                    <div class="offer__item-title text text_white text_s-small">
+                                        Квалифицированного
+                                    </div>
+                                    <div class="offer__item-rank title title_white title_tiny title_w-black title_uppercase">
+                                        Бухгалтера
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="offer__item-text text text_dark text_s-small">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum океана свое выйти взобравшись?
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="offer__item">
+                        <div class="offer__item-content">
+                            <div class="offer__item-rectangle-bg">
+                                <div class="offer__item-bg">
+                                    <img class="offer__item-img" src="img/landing/img-1.jpg" alt="">
+                                </div>
+                                <div class="offer__item-overlay">
+                                    <div class="offer__item-title text text_white text_s-small">
+                                        Квалифицированного
+                                    </div>
+                                    <div class="offer__item-rank title title_white title_tiny title_w-black title_uppercase">
+                                        Юриста
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="offer__item-text text text_dark text_s-small">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum океана свое выйти взобравшись?
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="offer__item">
+                        <div class="offer__item-content">
+                            <div class="offer__item-rectangle-bg">
+                                <div class="offer__item-bg">
+                                    <img class="offer__item-img" src="img/landing/img-1.jpg" alt="">
+                                </div>
+                                <div class="offer__item-overlay">
+                                    <div class="offer__item-title text text_white text_s-small">
+                                        Квалифицированного
+                                    </div>
+                                    <div class="offer__item-rank title title_white title_tiny title_w-black title_uppercase">
+                                        Налогового консультанта
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="offer__item-text text text_dark text_s-small">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum океана свое выйти взобравшись?
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+		</section>
 
 		<div class="landAbout">
 			<h3 class="landAbout__title">
@@ -1019,11 +1059,11 @@
 		</div>
 	</footer>
 	<!--Подключение скриптов-->
-	<script src="libs/jquery-3.3.1.js"></script>
-	<script src="libs/slinky.min.js"></script>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/slinky.min.js"></script>
 	<script src="js/wnumb.js"></script>
 	<script src="js/nouislider.js"></script>
-	<script src="libs/common.js"></script>
+	<script src="js/scripts.min.js"></script>
 	<!-- <script src="js/scripts.min.js"></script> -->
 	<!--Подключение скриптов КОНЕЦ-->
 </body>
